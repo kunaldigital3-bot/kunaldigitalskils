@@ -17,113 +17,159 @@
     fbq('init', '2158751704959418');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2158751704959418&ev=PageView&noscript=1"
-    /></noscript>
     <style>
         body {
-            background-color: #000;
+            background-color: #0b0f0e;
             color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
         }
-        .card {
-            background: linear-gradient(145deg, #0f1715, #050505);
+
+        .container {
+            background-color: #0b0f0e;
             width: 100%;
-            max-width: 400px;
-            border-radius: 30px;
-            padding: 30px 20px;
+            max-width: 420px;
             text-align: center;
-            box-shadow: 0 0 20px rgba(0, 255, 127, 0.1);
-            border: 1px solid #1a1a1a;
+            border-radius: 20px;
+            padding-bottom: 30px;
         }
-        .logo-container {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            border: 3px solid #00ff7f;
+
+        .logo-box {
+            width: 130px;
+            height: 130px;
+            margin: 20px auto;
+            background: radial-gradient(circle, rgba(74, 222, 128, 0.2) 0%, rgba(0,0,0,0) 70%);
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 15px #00ff7f;
         }
-        .logo-container img { width: 80%; height: auto; }
-        h1 { color: #4ade80; font-size: 24px; margin-bottom: 10px; }
-        .subtitle { font-size: 14px; color: #ccc; margin-bottom: 15px; }
-        .stats { color: #fbbf24; font-size: 14px; margin-bottom: 10px; }
-        .timer { color: #f87171; font-weight: bold; margin-bottom: 20px; }
-        .cta-button {
+
+        .logo-box img {
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            color: #4ade80;
+            font-size: 26px;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .sub-text { font-size: 14px; margin: 5px 0; color: #e0e0e0; }
+        .joined-text { color: #ffb800; font-size: 15px; margin: 10px 0; font-weight: 500; }
+        
+        .timer-box {
+            color: #ff5f5f;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .btn {
             display: block;
-            background: linear-gradient(90deg, #4ade80, #3b82f6);
+            background: linear-gradient(90deg, #82ee85 0%, #3ba8ff 100%);
             color: #000;
             text-decoration: none;
-            padding: 15px;
+            padding: 18px;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 800;
             font-size: 18px;
-            margin: 15px 0;
-            box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
-            transition: transform 0.2s;
+            margin: 20px 0;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(130, 238, 133, 0.3);
         }
-        .cta-button:active { transform: scale(0.98); }
-        .feature-box {
-            background: rgba(255, 255, 255, 0.05);
-            margin: 8px 0;
-            padding: 12px;
+
+        .feature {
+            background: #1a1f1e;
+            border: 1px solid #2d3331;
+            padding: 15px;
             border-radius: 15px;
-            font-size: 14px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 15px;
+            color: #d1d1d1;
         }
-        .disclaimer { font-size: 10px; color: #666; margin-top: 20px; line-height: 1.4; }
+
+        .disclaimer {
+            font-size: 11px;
+            color: #666;
+            margin-top: 25px;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
         .footer-link {
             display: block;
-            margin-top: 15px;
-            color: #555;
+            margin-top: 20px;
+            color: #444;
             text-decoration: none;
-            font-size: 12px;
-            transition: color 0.3s;
+            font-size: 13px;
         }
-        .footer-link:hover { color: #888; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="logo-container">
-            <img src="https://img.icons8.com/color/96/bullish.png" alt="Logo">
-        </div>
-
-        <h1>Tamil Harmonic Trader Raj</h1>
-        <p class="subtitle">📊 India's Fast Growing Stock Market Learning Channel</p>
-        <p class="stats">🔥 2,389 Serious Traders Joined in Last 24 Hours</p>
-        <p class="timer">Market Insights Access Ends In: 01:58</p>
-
-        <a href="Https://t.me/+R9qTaqWM7qU1MTE9" class="cta-button">JOIN OUR LEARNING CHANNEL</a>
-
-        <div class="feature-box">📈 Daily Stock Market Analysis</div>
-        <div class="feature-box">💹 Intraday & Swing Trading Learning</div>
-        <div class="feature-box">🛡️ Risk Management & Capital Protection</div>
-        <div class="feature-box">🎯 Beginner to Advanced Guidance</div>
-
-        <a href="Https://t.me/+R9qTaqWM7qU1MTE9" class="cta-button">JOIN OUR LEARNING CHANNEL</a>
-
-        <p class="disclaimer">
-            Disclaimer: This channel is for educational purposes only. <br>
-            Stock market investments are subject to market risk.
-        </p>
-
-        <a href="Https://t.me/+jE7sEbzR23gwM2U1" class="footer-link">Ads managed by Kunal</a>
+<div class="container">
+    <div class="logo-box">
+        <img src="https://i.ibb.co/m5YvXy0/trading-logo-neon.png" alt="Logo">
     </div>
+
+    <h1>Tamil Harmonic Trader Raj</h1>
+    
+    <p class="sub-text">📊 India's Fast Growing Stock Market Learning Channel</p>
+    <p class="joined-text">🔥 2,389 Serious Traders Joined in Last 24 Hours</p>
+    
+    <div class="timer-box">
+        Market Insights Access Ends In: <span id="timer">02:00</span>
+    </div>
+
+    <a href="Https://t.me/+R9qTaqWM7qU1MTE9" class="btn">JOIN OUR LEARNING CHANNEL</a>
+
+    <div class="feature">📈 Daily Stock Market Analysis</div>
+    <div class="feature">✅ Intraday & Swing Trading Learning</div>
+    <div class="feature">🛡️ Risk Management & Capital Protection</div>
+
+    <p class="disclaimer">
+        Disclaimer: This channel is for educational purposes only. Stock market investments are subject to market risk.
+    </p>
+
+    <a href="Https://t.me/+jE7sEbzR23gwM2U1" class="footer-link">Ads managed by Kunal</a>
+</div>
+
+<script>
+    // Timer Function (2 Minutes)
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = 0; // Stop at 00:00
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var twoMinutes = 60 * 2,
+            display = document.querySelector('#timer');
+        startTimer(twoMinutes, display);
+    };
+</script>
 
 </body>
 </html>
