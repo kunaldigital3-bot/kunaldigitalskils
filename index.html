@@ -21,48 +21,46 @@
         body {
             background-color: #0b0f0e;
             color: #fff;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 15px;
+            padding: 10px;
         }
 
         .container {
-            background-color: #0b0f0e;
             width: 100%;
-            max-width: 420px;
+            max-width: 400px;
             text-align: center;
-            border-radius: 20px;
-            padding-bottom: 30px;
+            padding: 20px;
         }
 
-        .logo-box {
-            width: 130px;
-            height: 130px;
-            margin: 20px auto;
-            background: radial-gradient(circle, rgba(74, 222, 128, 0.2) 0%, rgba(0,0,0,0) 70%);
+        /* DP Section - Using logo.png */
+        .dp-circle {
+            width: 115px;
+            height: 115px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 3px solid #4ade80;
+            box-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
+            background: #000;
+            overflow: hidden;
         }
 
-        .logo-box img {
+        .dp-circle img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
 
-        h1 {
-            color: #4ade80;
-            font-size: 26px;
-            margin: 10px 0;
-            font-weight: 700;
-        }
-
-        .sub-text { font-size: 14px; margin: 5px 0; color: #e0e0e0; }
-        .joined-text { color: #ffb800; font-size: 15px; margin: 10px 0; font-weight: 500; }
+        h1 { color: #4ade80; font-size: 24px; margin: 10px 0; }
+        .sub { color: #ccc; font-size: 14px; margin: 5px 0; }
+        .stats { color: #ffb800; font-size: 14px; margin-bottom: 10px; }
         
         .timer-box {
             color: #ff5f5f;
@@ -73,60 +71,67 @@
 
         .btn {
             display: block;
-            background: linear-gradient(90deg, #82ee85 0%, #3ba8ff 100%);
+            background: linear-gradient(90deg, #4ade80 0%, #3b82f6 100%);
             color: #000;
             text-decoration: none;
-            padding: 18px;
+            padding: 16px;
             border-radius: 50px;
-            font-weight: 800;
+            font-weight: bold;
             font-size: 18px;
             margin: 20px 0;
-            text-transform: uppercase;
-            box-shadow: 0 0 15px rgba(130, 238, 133, 0.3);
+            box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
         }
 
         .feature {
             background: #1a1f1e;
-            border: 1px solid #2d3331;
-            padding: 15px;
-            border-radius: 15px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 15px;
-            color: #d1d1d1;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
 
         .disclaimer {
-            font-size: 11px;
-            color: #666;
-            margin-top: 25px;
-            line-height: 1.5;
-            padding: 0 10px;
+            font-size: 10px;
+            color: #555;
+            margin-top: 30px;
+            line-height: 1.4;
         }
 
-        .footer-link {
-            display: block;
-            margin-top: 20px;
-            color: #444;
+        /* Kunal Section - Separated & Clickable */
+        .footer-branding {
+            margin-top: 25px;
+            padding: 10px;
+            border-top: 1px solid #222;
+        }
+
+        .kunal-btn {
+            color: #4ade80;
             text-decoration: none;
             font-size: 13px;
+            font-weight: bold;
+            border: 1px solid #4ade80;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .kunal-btn:hover {
+            background: #4ade80;
+            color: #000;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="logo-box">
-        <img src="https://i.ibb.co/m5YvXy0/trading-logo-neon.png" alt="Logo">
+    <div class="dp-circle">
+        <img src="logo.png" alt="Profile Logo">
     </div>
 
     <h1>Tamil Harmonic Trader Raj</h1>
-    
-    <p class="sub-text">📊 India's Fast Growing Stock Market Learning Channel</p>
-    <p class="joined-text">🔥 2,389 Serious Traders Joined in Last 24 Hours</p>
+    <p class="sub">📊 India's Fast Growing Stock Market Learning Channel</p>
+    <p class="stats">🔥 2,389 Serious Traders Joined in Last 24 Hours</p>
     
     <div class="timer-box">
         Market Insights Access Ends In: <span id="timer">02:00</span>
@@ -142,32 +147,25 @@
         Disclaimer: This channel is for educational purposes only. Stock market investments are subject to market risk.
     </p>
 
-    <a href="Https://t.me/+jE7sEbzR23gwM2U1" class="footer-link">Ads managed by Kunal</a>
+    <div class="footer-branding">
+        <a href="Https://t.me/+jE7sEbzR23gwM2U1" class="kunal-btn">Ads managed by Kunal</a>
+    </div>
 </div>
 
 <script>
-    // Timer Function (2 Minutes)
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
         setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
-
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-
             display.textContent = minutes + ":" + seconds;
-
-            if (--timer < 0) {
-                timer = 0; // Stop at 00:00
-            }
+            if (--timer < 0) { timer = 0; }
         }, 1000);
     }
-
     window.onload = function () {
-        var twoMinutes = 60 * 2,
-            display = document.querySelector('#timer');
-        startTimer(twoMinutes, display);
+        startTimer(120, document.querySelector('#timer')); // 2 Minute Countdown
     };
 </script>
 
